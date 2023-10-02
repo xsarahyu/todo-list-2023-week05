@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;;
+    /* border: 1px solid black; */
+}
+
+body {
+    background: rgb(228, 233, 255);
+}
+
+.container {
+    width: 30rem;
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1rem 2rem;
+    margin: 10% auto;
+    position: relative;
+    border: 1.5px solid black;
+}
+    .container::after { /*diagonal stripes */
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        height: 100%;
+        width: 100%;
+        border-radius: 1.5rem;
+        background: repeating-linear-gradient(
+            -45deg,
+            black,
+            black 1.5px,
+            white 1.5px,
+            white 15px);
+        content: '';
+        z-index: -1;
+        border: 1.5px solid black;
+    }
+
+h1 {
+    font-size: 1.75rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+button {
+    background: rgb(213, 220, 255);
+    border: none;
+    cursor: pointer;
+}
+    button:hover {
+        background: rgb(228, 233, 255);
+    }
+
+.input-button {
+    display: flex;
+    justify-content: center;
+    background: rgba(150, 150, 150, 0.05);
+    border-radius: 2rem;
+}
+    input {
+        flex: 1;
+        padding: 0 5%;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 1rem;
+    }
+    input::placeholder {
+        color: gray;
+        font-size: 1rem;
+    }
+    .input-button button {
+        border-radius: 50%;
+        padding: 5%;
+    }
+    i {
+        font-size: 0.8rem; /*all hearts are 0.8rem*/
+    }
+
+.icon::before { /*renders icons reliably */
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+li {
+    list-style: none;
+    padding: 1% 0;
+    position: relative;
+    font-size: 1rem;
+    user-select: none; /*disables highlighting text*/
+    cursor: pointer;
+}
+    li::before {
+        font-family: FontAwesome;
+        content: "\f004";
+        font: var(--fa-font-regular);
+        font-size: 0.8rem; /*all hearts are 0.8rem*/
+        position: absolute;
+        left: -1.7rem;
+        top: 0.45rem;
+    }
+
+li.completed {
+    text-decoration: rgb(213, 220, 255) line-through solid 1px;
+}
+    li.completed::before {
+        font: var(--fa-font-solid);
+        font-size: 0.8rem; /*all hearts are 0.8rem*/
+    }
+
+.clearButtons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    padding-bottom: 1.5rem;
+}
+    .clearButtons button {
+        padding: 3%;
+        border-radius: 1.5rem;
+        font-size: 0.75rem;
+    }
