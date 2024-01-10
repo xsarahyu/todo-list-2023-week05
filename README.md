@@ -1,4 +1,4 @@
-# ✅ Week05 Bootcamp2023 Project: Todo List
+# To-Do List
 
 ### Description
 - This to-do list allows users to:
@@ -8,7 +8,7 @@
   - Clear all tasks
 - Data is saved to the local browser storage, so users can refresh or close the browser, reopen the to-do list, and still have the same information available.
 
-![Screenshot 2023-10-01 232155](https://github.com/xsarahyu/todo-list-2023-week05/assets/144101729/6571f98c-1802-48aa-9692-e8cc94adf974)
+<img src="to-do-list.png" width="500px">
 
 ### Tech Used
 - HTML
@@ -19,3 +19,7 @@
 - How to style pseudo-elements in CSS
 - How to create new elements in JS
 - How to save data to the local browser storage
+
+
+### Notes
+I did this project as part of a bootcamp assignment. I took the chance to design my dream to-do list, and I love how it came out!! I use it everyday now. ❤
